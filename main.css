@@ -1,0 +1,51 @@
+* {
+	margin:0px;
+	padding:0px;
+}
+
+#main_div {
+	margin:auto;
+	margin-top:20px;
+	width:1000px;
+	height:600px;
+	border: 3px solid blue;
+}
+
+#info_bar {
+	position: fixed;
+	left:0;
+	top:0;
+	max-width: 100%;
+	height: 50px;
+	border: 10px solid blue;
+	background-color: solid white;
+
+}
+
+#header_main {
+	margin:auto;
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+}
+
+#blue_ribbon{
+	margin:auto;
+	top: 500px;
+	max-width: 100%;
+	height: 180px; 
+	width: auto; 
+	background-color: #33adff;
+}
+
+
+.crop {
+
+    width: 100%;
+    height: 700px;
+    background-position: center top;
+    background-size: cover;
+    background-image: url("img/dreamstime_l_49279394.jpg");
+
+    overflow:hidden;
+}
