@@ -9,13 +9,17 @@
 }
 
 
+/*---------------------------------------------------*/
+/* MAIN BACKGROUND */
+/*---------------------------------------------------*/
 .background {
 	width: 100%;
 	height: 800px;
 	background-position: center top;
 	background-size: cover;
 	background-image: url("../img/dreamstime_l_49279394.jpg");
-	margin-top: -50px;
+	margin-top: -150px;
+	margin-bottom: -50px;
 	overflow:hidden;
 	text-align: center;
 }
@@ -31,9 +35,10 @@
 	color: white;
 	text-align: center;
 	margin-top: 450px;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
-	font-size: 40;
-	font-family: Tahoma;
+	text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;  
+	font-size: 50;
+	font-family: "Open Sans Condensed", sans-serif;
+	-webkit-transform:scale(1.2,0.9);
 }
 
 .background-text p2{
@@ -41,8 +46,9 @@
 	text-align: center;
 	margin-top: 500px;
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
-	font-size: 30;
-	font-family: tahoma;
+	font-size: 35;
+	font-family: "Open Sans Condensed", sans-serif;
+	-webkit-transform:scale(1.2,0.9)
 }
 
 .background-text input[type=text] {
@@ -54,15 +60,19 @@
 .background-text input[type=submit] {
     border: 3px solid #00AEEF;
     border-radius: 4px;
-    padding: 5px;
     margin-left: 20px;
-    font-family: Tahoma;
+    font-family: "Open Sans Condensed", sans-serif;
     color: white;
 	background: #00AEEF;
-	font-weight: bold;
-
+	font-weight: 900;
+	font-size: 20;
+	-webkit-transform:scale(1.2,1);
 }
 
+
+/*---------------------------------------------------*/
+/* BLUE RIBBON */
+/*---------------------------------------------------*/
 .blue_ribbon{
 	margin:auto;
 	max-width: 100%;
@@ -71,3 +81,139 @@
 	background-color: #00AEEF;
 }
 
+.blue_ribbon_text{
+	width: 60%;
+	height: 180px;
+	margin: 0 auto;
+	display:block;
+}
+
+.blue_ribbon_partition{
+	float:left;
+    width: 25%;
+    background: #00AEEF;
+    text-align: center;
+    height: 180px;
+}
+
+.blue_ribbon_partition img{
+	margin-top: 10px;
+}
+
+.blue_ribbon_partition break{
+	display:block;
+	margin:10px 0;
+}
+
+.blue_ribbon_partition header_text{
+	text-align:justify;
+	font-weight: bold;
+	font-family:"Open Sans Condensed", sans-serif;
+	color: white;
+	font-size: 25;
+}
+
+.blue_ribbon_partition text{
+	text-align:justify center;
+	font-family:"Open Sans Condensed", sans-serif;
+	color: white;
+	font-size: 18;
+	padding: 0px 10px;
+}
+
+/*---------------------------------------------------*/
+/* Happy car happy costumer	*/
+/*---------------------------------------------------*/
+
+.happycar{
+	margin:auto;
+	max-width: 100%;
+	height: 230px;
+	width: auto;
+	background-color: white;
+	text-align: center;
+}
+
+.happycar img{
+	margin-top: 100px;
+	height: 50px;
+	width: 550px;
+	text-align: center;
+}
+
+/*---------------------------------------------------*/
+/* HOW TO INFORMATION	*/
+/*---------------------------------------------------*/
+
+.howto{
+	width: 60%;
+	height: 180px;
+	margin: 0 auto;
+	display:block;
+	background-color: black;
+}
+
+.howto_partition{
+	float:left;
+    width: 33.33333333333%;
+    background: white;
+    text-align: center;
+    height: 400px;
+}
+
+.howto_partition img{
+	margin-top: 10px;
+}
+
+.howto_partition break{
+	display:block;
+	margin:10px 0;
+}
+
+.howto_partition header_text{
+	text-align:justify;
+	font-weight: bold;
+	font-family:"Open Sans Condensed", sans-serif;
+	color: #00AEEF;
+	font-size: 25;
+}
+
+.howto_partition text{
+	text-align:justify center;
+	font-family:"Open Sans Condensed", sans-serif;
+	color: black;
+	font-size: 18;
+	padding: 0px 10px;
+}
+
+/*---------------------------------------------------*/
+/* HOW IT WORKS INFORMATION	*/
+/*---------------------------------------------------*/
+
+.process_header{
+	width: 60%;
+	height: 955px;
+	margin: 0 auto;
+	display:block;
+	background-color: white;
+	text-align: center;
+	font-family:"Open Sans Condensed", sans-serif;
+	font-size: 40;
+	font-weight: bold;
+	color:#00AEEF;
+} 
+
+/*---------------------------------------------------*/
+/* SCROLLING IMAGES	*/
+/*---------------------------------------------------*/
+.background_scroll {
+	width: 100%;
+	height: 800px;
+	background-position: center top;
+	background-size: cover;
+	background-image: url("../img/bmw.jpg");
+	margin-top: -150px;
+	margin-bottom: -50px;
+	overflow:hidden;
+	text-align: center;
+}
