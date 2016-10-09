@@ -31,6 +31,10 @@
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
+.menu-items img {
+    opacity: 0.8;
+}
+
 .bookauto-logo {
     width: 100px;
     height: auto;
@@ -41,4 +45,38 @@
 .menu-callcenter {
     width: 20px;
     margin-right: 5px;
+}
+
+h1 {
+    color: #10B4E6;
+    margin-left: 15px;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.starter-template {
+    margin-top: 70px;
+}
+
+.checkbox-label {
+    border: solid 1px rgba(0,0,0,0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.form-checks {
+    margin-top: 25px !important;
+}
+
+.form-check-inline {
+    display: inline-block;
+}
+
+.btn-bookauto {
+    float: right;
+    margin-top: 5px;
 }
