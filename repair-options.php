@@ -1,3 +1,9 @@
+<?php
+
+if (!isset($_POST['license_plate']) || !isset($_POST['postal_code'])) {
+    header('Location: index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,20 +51,21 @@
 
       <div class="starter-template">
         <h1>Seleção de serviços</h1>
+        <form method="POST" action="user-info.php">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <h3>Manutenção</h3>
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="manutencao" value="Revisão Simples">
                             <span class="checkbox-label">Revisão Simples</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="manutencao" value="Revisão Oficial">
                             <span class="checkbox-label">Revisão Oficial</span>
                         </label>
                     </div>
@@ -71,7 +78,7 @@
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="manutencao" value="Inspeção Periódica">
                             <span class="checkbox-label">Inspeção Periódica</span>
                         </label>
                     </div>
@@ -80,35 +87,35 @@
                     <h3>Sistema de travagem</h3>
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="sistemadetravagem" value="Substituição Pastilhas Frente">
                             <span class="checkbox-label">Substituição Pastilhas Frente</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="sistemadetravagem" value="Substituição Pastilhas Trás">
                             <span class="checkbox-label">Substituição Pastilhas Trás</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="sistemadetravagem" value="Substituição Discos Frente">
                             <span class="checkbox-label">Substituição Discos Frente</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="sistemadetravagem" value="Substituição Discos Trás">
                             <span class="checkbox-label">Substituição Discos Trás</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="sistemadetravagem" value="Substituição Líquido Travões">
                             <span class="checkbox-label">Substituição Líquido Travões</span>
                         </label>
                     </div>
@@ -117,35 +124,35 @@
                     <h3>Ignição</h3>
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="ignicao" value="Substituição Bateria">
                             <span class="checkbox-label">Substituição Bateria</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="ignicao" value="Substituição de Velas">
                             <span class="checkbox-label">Substituição de Velas</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="ignicao" value="Substituição Motor de Arranque">
                             <span class="checkbox-label">Substituição Motor de Arranque</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="ignicao" value="Substituição Alternador">
                             <span class="checkbox-label">Substituição Alternador</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="ignicao" value="Substituição Bomba combustível">
                             <span class="checkbox-label">Substituição Bomba combustível</span>
                         </label>
                     </div>
@@ -156,21 +163,21 @@
                     <h3>Embraiagem</h3>
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="embraiagem" value="Substituição KIT de Embraiagem">
                             <span class="checkbox-label">Substituição KIT de Embraiagem</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="embraiagem" value="Subst. KIT de Embraiagem + Vol. Motor">
                             <span class="checkbox-label">Subst. KIT de Embraiagem + Vol. Motor</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="embraiagem" value="Substituição volante do motor">
                             <span class="checkbox-label">Substituição volante do motor</span>
                         </label>
                     </div>
@@ -179,21 +186,21 @@
                     <h3>Distribuição</h3>
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="distribuicao" value="Substituição correia distribuição">
                             <span class="checkbox-label">Substituição correia distribuição</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="distribuicao" value="Subst. correia distribuição + Bomba Água">
                             <span class="checkbox-label">Subst. correia distribuição + Bomba Água</span>
                         </label>
                     </div>
 
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="distribuicao" value="Substituição Correia Alternador">
                             <span class="checkbox-label">Substituição Correia Alternador</span>
                         </label>
                     </div>
@@ -202,14 +209,14 @@
                     <h3>Deseja recolha e entrega da viatura</h3>
                     <div class="checkbox form-check-inline">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="recolha_entrega_viatura" value="sim">
                             Sim
                         </label>
                     </div>
 
                     <div class="checkbox form-check-inline">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="recolha_entrega_viatura" value="nao">
                             Não
                         </label>
                     </div>
@@ -222,7 +229,7 @@
                     <h3>Não sabe o que se passa com o seu carro?</h3>
                     <div class="checkbox form-checks">
                         <label>
-                            <input type="checkbox">
+                            <input type="radio" name="diagnostico" value="sim">
                             <span class="checkbox-label">Diagnóstico Problema</span>
                         </label>
                     </div>
@@ -231,11 +238,14 @@
                 </div>
                 <div class="col-md-8">
                     <h3>Observações</h3>
-                    <textarea class="form-control" rows="5"></textarea>
-                    <button type="button" class="btn btn-info btn-bookauto btn-lg">Seguinte</button>
+                    <textarea class="form-control" name="observacoes-reparacao" rows="5"></textarea>
+                    <input type="hidden" name="license_plate" value="<?php echo $_POST['license_plate'];?>" />
+                    <input type="hidden" name="postal_code" value="<?php echo $_POST['postal_code'];?>" />
+                    <button type="submit" name="submit-repair" value="si" class="btn btn-info btn-bookauto btn-lg">Seguinte</button>
                 </div>
             </div>
         </div>
+    </form>
       </div>
 
       <br />

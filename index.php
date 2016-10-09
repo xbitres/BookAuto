@@ -43,12 +43,12 @@
   </nav>
 
 	<!-- Smiley guy picture and main menu-->
-	<div class="background"> 
-		<div class="background-text"> 
+	<div class="background">
+		<div class="background-text">
 			<p> <b> A SUA EQUIPA DE MECÂNICOS ONDE QUISER </b></p>
 			<p2> <b> Marque a reparação do seu carro com conforto </b> </p2>
 			<br> <br> <br>
-      <form action="form-options.html">
+      <form action="repair-options.php" method="POST">
   			<input type="text" name="license_plate" placeholder="Matrícula" />
   			<input type="text" name="postal_code" placeholder="Código Postal"/>
   			<input type="submit" value="      Obter preço      "/>
@@ -61,22 +61,22 @@
 	<div class ="blue_ribbon">
     <div class="blue_ribbon_text">
       <div class="blue_ribbon_partition">
-		    <img src="img/save.png" alt="Piggy bank" height="70px" width="90px" vspace="5"> <break> 
+		    <img src="img/save.png" alt="Piggy bank" height="70px" width="90px" vspace="5"> <break>
         <header_text> Poupe Dinheiro </header_text> <br>
         <text> Conheça os melhores preços e controle facilmente os gastos </text>
       </div>
       <div class="blue_ribbon_partition">
-        <img src="img/time_3.png" alt="Time" height="70px" width="70px"> <break> 
+        <img src="img/time_3.png" alt="Time" height="70px" width="70px"> <break>
         <header_text> Poupe Tempo </header_text> <br>
         <text> Decida se quer que seja feita a recolha e entrega da sua viatura </text>
       </div>
       <div class="blue_ribbon_partition">
-        <img src="img/star33.png" alt="Handy Man" height="70px" width="95px"> <break> 
+        <img src="img/star33.png" alt="Handy Man" height="70px" width="95px"> <break>
         <header_text> Confiança </header_text> <br>
         <text> Conheça à partida quais os níveis de qualidade de cada oficina </text>
       </div>
       <div class="blue_ribbon_partition">
-        <img src="img/price_tag.png" alt="Price tag" height="70px" width="70px"> <break> 
+        <img src="img/price_tag.png" alt="Price tag" height="70px" width="70px"> <break>
         <header_text> Preço pré-serviço </header_text> <br>
         <text> Todos os preços apresentados em tempo real </text>
       </div>
@@ -91,17 +91,17 @@
   <!-- How to information partitions -->
   <div class="howto">
     <div class="howto_partition">
-      <img src="img/matricula_blue.png" alt="License Plate" height="130px" width="220px"> <break> 
+      <img src="img/matricula_blue.png" alt="License Plate" height="130px" width="220px"> <break>
       <header_text> 1- Insira a matrícula e código postal </header_text> <break>
       <text> Insira a matricula e o código postal onde quer que seja feita a recolha do carro por mecânicos especializados.</text>
     </div>
     <div class="howto_partition">
-      <img src="img/123.png" alt="Car" height="130px" width="260px"> <break> 
+      <img src="img/123.png" alt="Car" height="130px" width="260px"> <break>
       <header_text> 2- Selecione o serviço e a data  </header_text> <break>
       <text> Selecione que tipo de serviço quer efetuar no seu carro e a data em que o quer realizar.</text>
-    </div>  
+    </div>
     <div class="howto_partition">
-      <img src="img/screen.png" alt="Screen" height="130px" width="220px" > <break> 
+      <img src="img/screen.png" alt="Screen" height="130px" width="220px" > <break>
       <header_text> 3- Preços antes do serviço, adjudique online</header_text> <break>
       <text> Selecione a oficina e saiba os preços antes do carro estar na oficina, com total transparência.</text>
     </div>
@@ -111,7 +111,7 @@
   <!-- Process-->
   <div class="process_header">
     Você não precisa ir à revisão, o seu carro sim!
-    <img src="img/process.jpg" alt="Process"> 
+    <img src="img/process.jpg" alt="Process">
   </div>
 
   <!-- Images scrolling -->
@@ -126,7 +126,7 @@
           <img src="img/facebook.jpg" alt="facebook" style="width:42px;height:42px;align = "top"">
         </a>
         <input type="submit" value="     Mecânicos      "/>
-        <img src="img/startuplisboa.png" alt="Startup lisboa" height="35%" width="20%" align="right" > 
+        <img src="img/startuplisboa.png" alt="Startup lisboa" height="35%" width="20%" align="right" >
     </div>
   </div>
 

@@ -1,3 +1,10 @@
+<?php
+
+if (!isset($_POST['license_plate']) || !isset($_POST['postal_code']) || !isset($_POST['submit-repair'])) {
+    header('Location: index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,37 +65,38 @@
 
       <div class="starter-template">
         <h1>Dados do condutor</h1>
+        <form method="POST" action="checkout.php">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nome">
+                                <input type="text" name="nome-cliente" class="form-control" id="exampleInputEmail1" placeholder="Nome">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Apelido">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Telefone">
+                                <input type="text" name="apelido-cliente" class="form-control" id="exampleInputEmail1" placeholder="Apelido">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="NIF">
+                                <input type="text" name="email-cliente" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="telefone-cliente" class="form-control" id="exampleInputEmail1" placeholder="Telefone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="nif-cliente" class="form-control" id="exampleInputEmail1" placeholder="NIF">
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -97,23 +105,58 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Morada">
+                                <input type="text" name="morada-cliente" class="form-control" id="exampleInputEmail1" placeholder="Morada">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nº Porta">
+                                <input type="text" name="porta-cliente" class="form-control" id="exampleInputEmail1" placeholder="Nº Porta">
                             </div>
                         </div>
                         <div class="col-md-9">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Observações">
+                                <input type="text" name="observacoes-cliente" class="form-control" id="exampleInputEmail1" placeholder="Observações">
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-info btn-bookauto btn-lg">Obter preço</button>
+                    <input type="hidden" name="license_plate" value="<?php echo $_POST['license_plate'];?>" />
+                    <input type="hidden" name="postal_code" value="<?php echo $_POST['postal_code'];?>" />
+                    <?php
+                        if (isset($_POST['manutencao'])) {
+                            echo '<input type="hidden" name="manutencao" value="' . $_POST['manutencao'] . '" />';
+                        }
+
+                        if (isset($_POST['sistemadetravagem'])) {
+                            echo '<input type="hidden" name="sistemadetravagem" value="' . $_POST['sistemadetravagem'] . '" />';
+                        }
+
+                        if (isset($_POST['ignicao'])) {
+                            echo '<input type="hidden" name="ignicao" value="' . $_POST['ignicao'] . '" />';
+                        }
+
+                        if (isset($_POST['embraiagem'])) {
+                            echo '<input type="hidden" name="embraiagem" value="' . $_POST['embraiagem'] . '" />';
+                        }
+
+                        if (isset($_POST['distribuicao'])) {
+                            echo '<input type="hidden" name="distribuicao" value="' . $_POST['distribuicao'] . '" />';
+                        }
+
+                        if (isset($_POST['recolha_entrega_viatura'])) {
+                            echo '<input type="hidden" name="recolha_entrega_viatura" value="' . $_POST['recolha_entrega_viatura'] . '" />';
+                        }
+
+                        if (isset($_POST['diagnostico'])) {
+                            echo '<input type="hidden" name="diagnostico" value="' . $_POST['diagnostico'] . '" />';
+                        }
+
+                        if (isset($_POST['observacoes-reparacao'])) {
+                            echo '<input type="hidden" name="observacoes-reparacao" value="' . $_POST['observacoes-reparacao'] . '" />';
+                        }
+                    ?>
+                    <button type="submit" name="reparacao-completa" class="btn btn-info btn-bookauto btn-lg">Obter preço</button>
                 </div>
                 <div class="col-md-4" style="text-align: center">
                     <div style="overflow:hidden;">
@@ -132,6 +175,7 @@
             </div>
 
         </div>
+        </form>
       </div>
 
       <br />
