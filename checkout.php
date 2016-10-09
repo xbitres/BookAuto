@@ -1,3 +1,44 @@
+<?php
+
+  $to = "mailparacenas100@gmail.com";
+  $subject = "BookAuto service request";
+  
+  $license_plate = "27-AX-10";
+  $postal_code = "2730-298";
+
+  $service_selection = "Susbtituição pastilhas frente";
+  $wishes_delivery = 1;
+  $observations = "";
+
+  $name = "João";
+  $surname = "Varandas";
+  $e_mail = "xxxx@gmail.com";
+  $telephone = "9105333333";
+  $nif = "27364823647234";
+
+  if($wishes_delivery == 1){
+
+    $adress = "Rua do Cao";
+    $door_number = "15": 
+    $obs_2 = "";
+  }
+
+  $date = "21-September-2015";
+
+  $message = "Service request for ". $date . ". \n";
+  $message = $message . $name . " " . $surname " requested the following service(s): " . $service_selection ." .\n";
+  $message = $message . "Additional information: License plate: " . $license_plate . " Postal code: " . $postal_code . " Nif: " . $nif . "Telephone:" . $telephone .".\n";
+  $message = $message . "Client e_mail: " . $e_mail . "Observations: " . $observations .".\n";
+
+  if($wishes_delivery == 1){
+    $message = $message . "The client wishes delivery at the following addres: " . $adress . " door number: " . $door_number . ". Additional informations: " . $obs_2;
+  }
+
+  mail($to , $subject , $message);
+
+?>
+
+
 <html>
 <head>
 	<meta charset="utf-8">
