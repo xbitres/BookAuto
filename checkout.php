@@ -1,34 +1,37 @@
 <?php
+
+  require_once 'MailWrapper.php';
+
   $to = "mailparacenas100@gmail.com";
   $subject = "BookAuto service request";
 
   $license_plate = $_POST['license_plate'];
-  $postal_code = $_POST['license_plate'];
+  $postal_code = $_POST['postal_code'];
 
   $service_selection = "";
 
   if (isset($_POST['manutencao'])) {
-      $service_selection = $service_selection . $_POST['manutencao'] . ';';
+      $service_selection = $service_selection . $_POST['manutencao'] . '; ';
   }
 
   if (isset($_POST['sistemadetravagem'])) {
-      $service_selection = $service_selection . $_POST['sistemadetravagem'] . ';';
+      $service_selection = $service_selection . $_POST['sistemadetravagem'] . '; ';
   }
 
   if (isset($_POST['ignicao'])) {
-      $service_selection = $service_selection . $_POST['ignicao'] . ';';
+      $service_selection = $service_selection . $_POST['ignicao'] . '; ';
   }
 
   if (isset($_POST['embraiagem'])) {
-      $service_selection = $service_selection . $_POST['embraiagem'] . ';';
+      $service_selection = $service_selection . $_POST['embraiagem'] . '; ';
   }
 
   if (isset($_POST['distribuicao'])) {
-      $service_selection = $service_selection . $_POST['distribuicao'] . ';';
+      $service_selection = $service_selection . $_POST['distribuicao'] . '; ';
   }
 
   if (isset($_POST['diagnostico'])) {
-      $service_selection = $service_selection . 'diagnostico total;';
+      $service_selection = $service_selection . 'diagnostico total; ';
   }
 
   $wishes_delivery = 0;
@@ -55,15 +58,18 @@
   $date = "21-September-2015";
 
   $message = "Service request for $date. \n";
-  $message = $message . $name . " " . $surname " requested the following service(s): " . $service_selection ." .\n";
+  $message = $message . "$name $surname requested the following service(s): " . $service_selection ." .\n";
   $message = $message . "Additional information: License plate: " . $license_plate . " Postal code: " . $postal_code . " Nif: " . $nif . "Telephone:" . $telephone .".\n";
-  $message = $message . "Client e_mail: " . $e_mail . "Observations: " . $observations .".\n";
+  $message = $message . "Client e_mail: $e_mail Observations: $observations.\n";
 
   if($wishes_delivery == 1){
-    $message = $message . "The client wishes delivery at the following addres: " . $adress . " door number: " . $door_number . ". Additional informations: " . $obs_2;
+    $message = $message . "The client wishes delivery at the following addres: $adress door number: $door_number. Additional informations: $obs_2";
   }
 
-  mail($to , $subject , $message);
+  $mail = new MailWrapper;
+  $mail->newEmail(array("BookAuto" => $to), $subject, $message, $message);
+
+  $mail->send();
 
 ?>
 
