@@ -279,3 +279,49 @@
 .bottom_bar_div img{
 	margin-top: 60px;
 }
+
+/*---------------------------------------------------*/
+/* NAV BAR	*/
+/*---------------------------------------------------*/
+
+.navbar-bookauto {
+    background-color: rgba(255,255,255,0) !important;
+    background-repeat: repeat-x;
+    border-bottom: 0px;
+}
+
+.navbar-bookauto .navbar-nav > .open > a,
+.navbar-bookauto .navbar-nav > .active > a {
+  background-image: rgba(255,255,255,0) !important;
+  background-repeat: repeat-x;
+}
+
+.navbar-bookauto .navbar-nav a:hover{
+  background-image: rgba(255,255,255,0);
+  background-repeat: repeat-x;
+}
+
+.bookauto-logo {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin-top: -5px;
+}
+
+.menu-callcenter {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.menu-items img {
+    opacity: 0.8;
+}
+
+.menu-items a {
+    color: rgba(0, 0, 0, 1) !important;
+    font-weight: bold;
+    font-family: "Open Sans Condensed", sans-serif;
+    -webkit-transform:scale(1.1,1);
+    font-size:16;
+
+}

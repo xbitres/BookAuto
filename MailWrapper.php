@@ -23,8 +23,8 @@ class MailWrapper {
 		$this->_mail->isSMTP();
 		$this->_mail->Host = "smtp.gmail.com";
 		$this->_mail->SMTPAuth = true;
-		$this->_mail->Username = "teste@gmail.com";
-		$this->_mail->Password = "password123";
+		$this->_mail->Username = "mailparacenas100@gmail.com";
+		$this->_mail->Password = "mailparacenas";
 		$this->_mail->SMTPSecure = 'tls';
 		$this->_mail->Port = 587;
 	}

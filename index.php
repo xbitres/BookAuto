@@ -10,13 +10,12 @@
 
   <title>HomePage | BookAuto</title>
   <meta charset="utf-8"/>
-  <link rel="stylesheet" href="css/bookauto-mainpage.css"/>
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!--  Open Sans Font -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="css/bookauto.css" rel="stylesheet">
+  <link href="css/bookauto-mainpage.css" rel="stylesheet">
 </head>
 <body>
 
